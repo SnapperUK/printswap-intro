@@ -6,7 +6,7 @@ Private deployment notes. Not public.
 
 - **Domain:** print-swap.com
 - **Hosting:** Cloudflare Pages
-- **Form:** Tally (free tier)
+- **Form:** Brevo (with Cloudflare Turnstile)
 
 ## Deploy
 
@@ -31,5 +31,5 @@ printswap-intro/
 ## Notes
 
 - No analytics, no CMS, no JavaScript framework
-- Form submissions collected in Tally dashboard
+- Form submissions collected in Brevo
 - To update copy: edit index.html directly, push
