@@ -110,6 +110,11 @@ main {
     margin-bottom: 0;
 }
 
+.hero--compact {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+}
+
 /* Sections */
 .section {
     margin-bottom: 3.5rem;
@@ -123,6 +128,30 @@ main {
 #interest iframe {
     min-height: 400px;
     margin-top: 1rem;
+}
+
+/* Support page: prevent email wrap, improve tap targets */
+.email-link {
+    white-space: nowrap;
+}
+
+.support-contact {
+    font-size: 1.0625rem;
+}
+
+.support-note {
+    color: #6b7280;
+}
+
+.footer-links a {
+    display: inline-block;
+    padding: 0.4em 0.5em;
+    margin: 0 -0.25em;
+}
+
+.footer-links .sep {
+    padding: 0 0.25em;
+    color: #9ca3af;
 }
 
 /* Footer */
