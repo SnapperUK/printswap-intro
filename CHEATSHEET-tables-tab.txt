@@ -1,0 +1,16 @@
+Copy each block below into Apple Notes, select it, then Format → Convert to Table (or right-click → Convert to Table).
+
+--- Table 1: Key URLs ---
+
+What	URL
+Live site	https://print-swap.com
+GitHub repo	https://github.com/SnapperUK/printswap-intro
+Cloudflare Pages	dash.cloudflare.com → Workers & Pages → printswap-intro
+
+--- Table 2: Key locations ---
+
+What	Where
+Local files	Print Swap Project/printswap-intro/
+Page content	index.html
+Styling	style.css
+Logo	assets/logo.png

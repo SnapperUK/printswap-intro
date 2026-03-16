@@ -3,15 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Print Swap</title>
-    <meta name="description" content="Where photographers exchange prints, not followers.">
-    
+    <title>Print Swap — Where Photographers Exchange Fine Art Prints</title>
+    <meta name="description" content="Print Swap is a platform where photographers exchange original, editioned fine art prints by mutual agreement. No marketplace, no prices — just mutual appreciation. Launching May 2026 in London.">
+    <link rel="canonical" href="https://print-swap.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://print-swap.com/">
+    <meta property="og:title" content="Print Swap — Where Photographers Exchange Fine Art Prints">
+    <meta property="og:description" content="A platform where photographers exchange original, editioned fine art prints by mutual agreement. No marketplace, no prices — just mutual appreciation.">
+    <meta property="og:image" content="https://print-swap.com/assets/og-image.png">
+    <meta property="og:site_name" content="Print Swap">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Print Swap — Where Photographers Exchange Fine Art Prints">
+    <meta name="twitter:description" content="A platform where photographers exchange original, editioned fine art prints by mutual agreement. No marketplace, no prices — just mutual appreciation.">
+    <meta name="twitter:image" content="https://print-swap.com/assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
     <!-- Quattrocento font from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&family=Quattrocento+Sans:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Print Swap",
+      "url": "https://print-swap.com",
+      "description": "A platform where photographers exchange original, editioned fine art prints by mutual agreement."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Print Swap",
+      "url": "https://print-swap.com",
+      "logo": "https://print-swap.com/assets/logo.svg",
+      "email": "support@print-swap.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "24A Islington Green",
+        "addressLocality": "London",
+        "postalCode": "N1 8DU",
+        "addressCountry": "GB"
+      },
+      "sameAs": []
+    }
+    </script>
     <!-- Brevo form styles -->
     <style>
       @font-face {
@@ -57,7 +107,8 @@
     <main>
         <!-- Section 1: Name + short descriptor -->
         <header class="hero">
-            <img src="assets/logo.svg" alt="Print Swap" class="logo">
+            <img src="assets/logo.svg" alt="Print Swap logo" class="logo">
+            <h1 class="sr-only">Print Swap</h1>
             <p class="descriptor">Where photographers exchange prints, not followers.</p>
         </header>
 
@@ -207,17 +258,18 @@
         </section>
     </main>
 
-    <!-- Section 7: Footer -->
     <footer class="footer">
-        <p class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <span class="sep">·</span>
-            <a href="support.html">Support</a>
-            <span class="sep">·</span>
-            London
-        </p>
+        <nav aria-label="Footer navigation">
+            <p class="footer-links">
+                <a href="/privacy.html">Privacy Policy</a>
+                <span class="sep">·</span>
+                <a href="/support.html">Support</a>
+                <span class="sep">·</span>
+                London
+            </p>
+        </nav>
         <p>Founded by photographers</p>
-        <p class="copyright">© 2025</p>
+        <p class="copyright">© 2026 Print Swap</p>
     </footer>
 
     <!-- Brevo form scripts -->
