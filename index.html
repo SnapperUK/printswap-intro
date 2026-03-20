@@ -107,7 +107,10 @@
     <main>
         <!-- Section 1: Name + short descriptor -->
         <header class="hero">
-            <img src="assets/logo.svg" alt="Print Swap logo" class="logo">
+            <picture>
+                <source srcset="assets/logo-white.svg" media="(prefers-color-scheme: dark)">
+                <img src="assets/logo.svg" alt="Print Swap logo" class="logo">
+            </picture>
             <h1 class="sr-only">Print Swap</h1>
             <p class="descriptor">Where photographers exchange prints, not followers.</p>
         </header>
