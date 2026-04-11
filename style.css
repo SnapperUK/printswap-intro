@@ -143,6 +143,17 @@ main {
     color: #6b7280;
 }
 
+/* Legal / policy draft notice (pricing, compliance) */
+.legal-draft {
+    font-size: 0.9375rem;
+    color: #6b7280;
+    margin-bottom: 1.75rem;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #30638e;
+    background: rgba(48, 99, 142, 0.06);
+    line-height: 1.5;
+}
+
 .footer-links a {
     display: inline-block;
     padding: 0.4em 0.5em;
