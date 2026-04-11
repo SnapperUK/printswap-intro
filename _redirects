@@ -1,18 +1,6 @@
-# Prefer clean URLs in the address bar (301 from legacy .html)
+# Legacy .html URLs → clean paths (folders with index.html)
 /privacy.html /privacy 301
 /pricing.html /pricing 301
 /compliance.html /compliance 301
 /terms.html /terms 301
 /support.html /support 301
-
-# Clean URLs → flat HTML (Cloudflare Pages proxy 200)
-/pricing /pricing.html 200
-/pricing/ /pricing.html 200
-/compliance /compliance.html 200
-/compliance/ /compliance.html 200
-/terms /terms.html 200
-/terms/ /terms.html 200
-/privacy /privacy.html 200
-/privacy/ /privacy.html 200
-/support /support.html 200
-/support/ /support.html 200
