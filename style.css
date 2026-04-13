@@ -351,14 +351,22 @@ input:focus {
     text-align: center;
 }
 
-.hero-launch-announce {
+.hero-launch-lines {
+    max-width: 42.5rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-launch-lines .hero-launch-announce {
     font-size: 1.125rem;
     font-weight: 600;
     color: color-mix(in srgb, var(--color-primary) 72%, var(--color-secondary));
-    max-width: 42.5rem;
-    margin: 0 auto 0.5rem;
+    margin: 0 auto 0.35rem;
     line-height: 1.55;
-    text-align: center;
+}
+
+.hero-launch-lines .hero-launch-announce:last-of-type {
+    margin-bottom: 0.5rem;
 }
 
 .hero-upload-note {
@@ -369,35 +377,6 @@ input:focus {
     margin: 0 auto 1.25rem;
     line-height: 1.45;
     text-align: center;
-}
-
-/* Informational deadline only: lighter than primary CTA, links to #launch */
-a.hero-deadline-pill {
-    display: inline-block;
-    margin: 0 auto 1.875rem;
-    padding: 0.625rem 1.125rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--color-on-primary);
-    background-color: var(--color-link);
-    border-radius: 999px;
-    line-height: 1.35;
-    max-width: calc(100% - 1rem);
-    text-align: center;
-    text-decoration: none;
-    box-shadow: none;
-    transition: background-color 0.15s ease;
-}
-
-a.hero-deadline-pill:hover {
-    background-color: color-mix(in srgb, var(--color-link) 82%, var(--color-primary));
-    color: var(--color-on-primary);
-    text-decoration: none;
-}
-
-a.hero-deadline-pill:focus {
-    outline: 2px solid var(--color-link);
-    outline-offset: 3px;
 }
 
 .hero .btn-upload-primary {
@@ -801,8 +780,7 @@ a.hero-deadline-pill:focus {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .btn-upload-primary,
-    a.hero-deadline-pill {
+    .btn-upload-primary {
         transition: none;
     }
 }

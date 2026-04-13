@@ -68,16 +68,13 @@
 
             <p class="hero-mechanism-line">You propose a swap. If the other artist feels the same about yours, the exchange begins.</p>
 
-            <p class="hero-launch-announce">Print Swap launches at The Print Space on 7 May. We're exhibiting 50 founding prints, curated from uploads received before 1 May. Upload yours to be considered.</p>
+            <div class="hero-launch-lines">
+                <p class="hero-launch-announce">Print Swap launches at The Print Space on 7 May.</p>
+                <p class="hero-launch-announce">We're exhibiting 50 founding prints, curated from uploads received before 1 May.</p>
+                <p class="hero-launch-announce">Upload yours to be considered.</p>
+            </div>
 
             <p class="hero-upload-note">Uploads are submitted through the Print Swap app.</p>
-
-            <a href="#launch"
-               id="hero-deadline-wrap"
-               class="hero-deadline-pill"
-               aria-label="Launch exhibition details and upload deadline">
-                <span id="hero-deadline-line" aria-live="polite"></span>
-            </a>
 
             <a href="https://apps.apple.com/us/app/print-swap/id6752863046"
                class="btn-upload-primary"
@@ -234,21 +231,16 @@
 
             var eventEl = document.getElementById('event-days-remaining');
             var launchEl = document.getElementById('launch-days-remaining');
-            var heroLine = document.getElementById('hero-deadline-line');
 
             if (diff > 1) {
                 if (eventEl) eventEl.textContent = diff + ' days remaining';
                 if (launchEl) launchEl.textContent = diff + ' days remaining';
-                if (heroLine) heroLine.textContent = 'Upload before 1 May · ' + diff + ' days remaining';
             } else if (diff === 1) {
                 if (eventEl) eventEl.textContent = 'Last day';
                 if (launchEl) launchEl.textContent = 'last day';
-                if (heroLine) heroLine.textContent = 'Upload before 1 May · Last day';
             } else {
                 if (eventEl) eventEl.hidden = true;
                 if (launchEl) launchEl.textContent = '';
-                var heroWrap = document.getElementById('hero-deadline-wrap');
-                if (heroWrap) heroWrap.hidden = true;
             }
         }());
     </script>
