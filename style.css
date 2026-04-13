@@ -328,7 +328,7 @@ input:focus {
     font-size: clamp(2.25rem, 7vw, 4rem);
     line-height: 1.1;
     margin-top: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
 }
 
 .subheadline {
@@ -340,36 +340,69 @@ input:focus {
     margin-right: auto;
 }
 
-.mechanism {
-    font-size: 1rem;
-    color: var(--color-secondary);
-    margin-bottom: 1rem;
-    max-width: 30rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Hero: deadline urgency (filled pill, above the fold) */
-.hero-deadline-pill {
-    display: inline-block;
-    margin: 0 auto 1.25rem;
-    padding: 0.55rem 1.25rem;
-    font-size: 0.9375rem;
-    font-weight: 700;
-    color: var(--color-on-primary);
-    background-color: var(--color-primary);
-    border-radius: 999px;
-    line-height: 1.35;
-    max-width: 100%;
-}
-
+/* Hero v2: concept → context → urgency → action */
 .hero-mechanism-line {
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
     color: var(--color-primary);
-    font-weight: 700;
-    max-width: 28rem;
+    font-weight: 500;
+    max-width: 40.625rem;
+    margin: 0 auto 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.hero-launch-announce {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--color-primary) 72%, var(--color-secondary));
+    max-width: 42.5rem;
+    margin: 0 auto 0.5rem;
+    line-height: 1.55;
+    text-align: center;
+}
+
+.hero-upload-note {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--color-secondary);
+    max-width: 42.5rem;
     margin: 0 auto 1.25rem;
     line-height: 1.45;
+    text-align: center;
+}
+
+/* Informational deadline only: lighter than primary CTA, links to #launch */
+a.hero-deadline-pill {
+    display: inline-block;
+    margin: 0 auto 1.875rem;
+    padding: 0.625rem 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-on-primary);
+    background-color: var(--color-link);
+    border-radius: 999px;
+    line-height: 1.35;
+    max-width: calc(100% - 1rem);
+    text-align: center;
+    text-decoration: none;
+    box-shadow: none;
+    transition: background-color 0.15s ease;
+}
+
+a.hero-deadline-pill:hover {
+    background-color: color-mix(in srgb, var(--color-link) 82%, var(--color-primary));
+    color: var(--color-on-primary);
+    text-decoration: none;
+}
+
+a.hero-deadline-pill:focus {
+    outline: 2px solid var(--color-link);
+    outline-offset: 3px;
+}
+
+.hero .btn-upload-primary {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
 }
 
 /* Hero marketing graphic: full content column width (main max-width caps overall size) */
@@ -550,8 +583,8 @@ input:focus {
     color: var(--color-on-primary);
     text-decoration: none;
     padding: 1rem 2.75rem;
-    min-height: 52px;
-    border-radius: 4px;
+    min-height: 48px;
+    border-radius: 7px;
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1.3;
@@ -768,7 +801,8 @@ input:focus {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .btn-upload-primary {
+    .btn-upload-primary,
+    a.hero-deadline-pill {
         transition: none;
     }
 }
