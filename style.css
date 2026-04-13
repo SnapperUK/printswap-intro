@@ -318,29 +318,21 @@ input:focus {
     margin-right: auto;
 }
 
-/* Screenshots — single image, centred */
+/* Hero marketing graphic: full content column width (main max-width caps overall size) */
 .screenshots {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    display: block;
+    width: 100%;
     margin-top: 2rem;
     margin-bottom: 0;
-    justify-items: center;
 }
 
 .screenshots img {
+    display: block;
     width: 100%;
-    max-width: min(92vw, 420px);
+    max-width: 100%;
     height: auto;
     border-radius: 16px;
     box-shadow: 0 4px 16px color-mix(in srgb, var(--color-primary) 12%, transparent);
-    display: block;
-}
-
-@media (min-width: 640px) {
-    .screenshots img {
-        max-width: min(90vw, 520px);
-    }
 }
 
 /* Body paragraph below the screenshot */
