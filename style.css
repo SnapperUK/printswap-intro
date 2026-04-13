@@ -318,12 +318,13 @@ input:focus {
     margin-right: auto;
 }
 
-/* Screenshots — see STYLE_GUIDE_WEB §4 */
+/* Screenshots — single image, centred */
 .screenshots {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
     justify-items: center;
 }
 
@@ -334,6 +335,17 @@ input:focus {
     border-radius: 16px;
     box-shadow: 0 4px 16px color-mix(in srgb, var(--color-primary) 12%, transparent);
     display: block;
+}
+
+/* Body paragraph below the screenshot */
+.hero-body {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: var(--color-secondary);
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 /* Hero CTAs */
@@ -474,10 +486,6 @@ input:focus {
     .hero-ctas {
         flex-direction: row;
         justify-content: center;
-    }
-
-    .screenshots {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
 
