@@ -11,7 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://print-swap.com/">
     <meta property="og:title" content="Print Swap — Exchange Prints, Not Followers">
-    <meta property="og:description" content="A platform where photographers and visual artists exchange physical prints directly. Launching 7 May at The Print Space, Shoreditch.">
+    <meta property="og:description" content="A platform where photographers and visual artists exchange physical prints directly with each other. Launching 7 May at The Print Space, Shoreditch.">
     <meta property="og:image" content="https://print-swap.com/assets/og-image.png">
     <meta property="og:site_name" content="Print Swap">
     <meta property="og:locale" content="en_GB">
@@ -19,7 +19,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Print Swap — Exchange Prints, Not Followers">
-    <meta name="twitter:description" content="A platform where photographers and visual artists exchange physical prints directly. Launching 7 May at The Print Space, Shoreditch.">
+    <meta name="twitter:description" content="A platform where photographers and visual artists exchange physical prints directly with each other. Launching 7 May at The Print Space, Shoreditch.">
     <meta name="twitter:image" content="https://print-swap.com/assets/og-image.png">
 
     <!-- Favicon -->
@@ -66,7 +66,9 @@
 
             <h1>Exchange prints,<br>not followers.</h1>
 
-            <p class="subheadline">A platform where photographers and visual artists exchange physical prints directly with each other.</p>
+            <p class="subheadline">You've made work that deserves a wall. So has someone else.</p>
+
+            <p class="mechanism">Print Swap is a platform where photographers and visual artists exchange physical prints directly with each other — no buying, no selling, no metrics. Two people who want to live with each other's work.</p>
 
             <!-- FOUNDING DEADLINE: remove after 1 May -->
             <div class="deadline-block">
@@ -95,46 +97,56 @@
                      decoding="async">
             </a>
 
+            <!-- Drop Screen_01 v2.png into assets/screenshots/ to display below -->
             <div class="screenshots">
-                <img src="/assets/screenshots/screenshot-1.png" alt="Print Swap — browse the feed" width="1320" height="2869" loading="lazy" decoding="async">
-                <img src="/assets/screenshots/screenshot-2.png" alt="Print Swap — request a swap on an artwork" width="1321" height="2869" loading="lazy" decoding="async">
-                <img src="/assets/screenshots/screenshot-3.png" alt="Print Swap — track an active swap" width="1320" height="2869" loading="lazy" decoding="async">
+                <img src="/assets/screenshots/Screen_01 v2.png"
+                     alt="Print Swap — browse and discover prints"
+                     width="1320" height="2869"
+                     loading="lazy" decoding="async"
+                     onerror="this.closest('.screenshots').hidden=true">
+                <img src="/assets/screenshots/screenshot-2.png"
+                     alt="Print Swap — request a swap on an artwork"
+                     width="1321" height="2869"
+                     loading="lazy" decoding="async">
+                <img src="/assets/screenshots/screenshot-3.png"
+                     alt="Print Swap — track an active swap"
+                     width="1320" height="2869"
+                     loading="lazy" decoding="async">
             </div>
         </header>
 
 
         <!-- ============================================================
-             Section 2: Exhibition / Launch event
+             Section 2: Exhibition callout
              REMOVE this entire section after 1 May
              ============================================================ -->
         <section class="section section--event" id="launch">
+            <p class="event-label">Launch exhibition — limited to 50</p>
             <div class="event-lockup">
                 <span class="event-date">7 May 2026</span>
                 <span class="event-venue">The Print Space, Shoreditch</span>
             </div>
-            <p>For the opening we are exhibiting 50 prints, curated from work uploaded before <strong>1 May</strong>.</p>
-            <p>If your work is selected, it hangs that night. You become a permanent Founding Artist, and your work is live from the moment the first swaps open.</p>
+            <p>To mark the launch of Print Swap, we're exhibiting 50 prints at The Print Space in Shoreditch. Work is curated from uploads received before <strong>1 May</strong>.</p>
+            <p>If your work is selected, it hangs on the wall that night. You become a Founding Artist — a permanent identifier in the app, limited to the 50 artists chosen for the opening. Your work goes live for swaps from the moment the platform opens.</p>
+            <p>The exhibition deadline is 1 May. Print Swap continues after that — but there will only ever be 50 Founding Artists.</p>
             <a href="https://apps.apple.com/us/app/print-swap/id6752863046"
                class="btn-primary"
                data-cta="upload_cta_click"
                data-cta-location="launch">
-                Upload before 1 May
+                Upload before 1 May — <span id="launch-days-remaining" aria-live="polite"></span>
             </a>
         </section>
         <!-- END FOUNDING SECTION -->
 
 
         <!-- ============================================================
-             Section 3: Why it exists + Founders
+             Section 3: Why it exists
              ============================================================ -->
         <section class="section" id="why">
-            <p>Most of our work now lives on screens.</p>
-            <p>Print Swap is built around putting it back on walls.</p>
-            <p>No buying or selling between artists. Two artists choose each other's work.</p>
-
-            <div class="founders-block">
-                <p>Founded by <strong>Sam Faulkner</strong>, photographer, and <strong>Simon Roberts</strong>, photographer — two people who wanted a direct way to exchange work without selling it and without chasing metrics.</p>
-            </div>
+            <h2>Most of your work will never leave a screen.</h2>
+            <p>You've made images worth printing. Work that deserves to be framed, hung, and looked at every day. But the infrastructure around photography is built for selling, exhibiting, or feeding an algorithm. Most photographers don't want any of that.</p>
+            <p>Print Swap is built around something simpler: finding another photographer whose work you'd clear a wall for — and discovering they feel the same about yours.</p>
+            <p>No transaction. No gallery cut. No follower count. Two artists who choose each other. The platform runs continuously, so whenever you're ready, the collection is there.</p>
         </section>
 
 
@@ -142,34 +154,46 @@
              Section 4: How it works
              ============================================================ -->
         <section class="section" id="how">
-            <h2>How it works</h2>
+            <h2>Four steps. Two artists. One exchange.</h2>
             <ol class="how-list">
                 <li>
                     <span class="how-step-title">Upload your work.</span>
-                    <span class="how-step-body">Photograph, print size, paper type.</span>
+                    <span class="how-step-body">Choose the image you want to offer. Add your print size and paper preference.</span>
                 </li>
                 <li>
                     <span class="how-step-title">Browse the collection.</span>
-                    <span class="how-step-body">Find work you'd clear a wall for.</span>
+                    <span class="how-step-body">Find work from photographers across the platform that you'd genuinely want on your wall.</span>
                 </li>
                 <li>
                     <span class="how-step-title">Propose a swap.</span>
-                    <span class="how-step-body">The other artist sees your work and decides.</span>
+                    <span class="how-step-body">Send a proposal to that artist. They see your work. They decide.</span>
                 </li>
                 <li>
-                    <span class="how-step-title">If it's mutual, the exchange begins.</span>
-                    <span class="how-step-body">Both prints are produced and dispatched.</span>
+                    <span class="how-step-title">The exchange begins.</span>
+                    <span class="how-step-body">If it's mutual, both prints go into production. Each artist covers the cost of their own outgoing print. The Print Space handles production and fulfilment.</span>
                 </li>
             </ol>
-            <p class="how-note">Each artist covers the cost of their own outgoing print.<br>The Print Space handles production and fulfilment.</p>
         </section>
 
 
         <!-- ============================================================
-             Section 5: Final CTA
+             Section 5: Founding story
+             ============================================================ -->
+        <section class="section" id="founders">
+            <h2>This started as a conversation.</h2>
+            <div class="founders-block">
+                <p>Print Swap was founded by photographers <strong>Sam Faulkner</strong> and <strong>Simon Roberts</strong> — two people who wanted to exchange work directly without selling it and without chasing metrics. It didn't exist, so they built it.</p>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             Section 6: Final CTA
              ============================================================ -->
         <section class="section final-cta" id="download">
-            <h2>Some images aren't meant to stay on a screen.</h2>
+            <h2>You didn't make it to be scrolled past.</h2>
+            <p class="final-cta-body">Some images aren't meant to stay on a screen. They're meant to be printed, framed, and lived with — by someone who looked at your work and thought: I want that on my wall.</p>
+            <p class="final-cta-closer">That person is already here.</p>
             <a href="https://apps.apple.com/us/app/print-swap/id6752863046"
                class="btn-upload-primary"
                data-cta="upload_cta_click"
@@ -223,15 +247,21 @@
         // REMOVE after 1 May
         (function () {
             var deadline = new Date('2026-05-01T23:59:59');
-            var el = document.getElementById('days-remaining');
-            if (!el) return;
             var diff = Math.ceil((deadline - new Date()) / (1000 * 60 * 60 * 24));
+
+            var heroEl = document.getElementById('days-remaining');
+            var launchEl = document.getElementById('launch-days-remaining');
+
             if (diff > 1) {
-                el.textContent = diff + ' days remaining';
+                if (heroEl) heroEl.textContent = diff + ' days remaining';
+                if (launchEl) launchEl.textContent = diff + ' days remaining';
             } else if (diff === 1) {
-                el.textContent = 'Last day';
+                if (heroEl) heroEl.textContent = 'Last day';
+                if (launchEl) launchEl.textContent = 'last day';
             } else {
-                el.closest('.deadline-block').hidden = true;
+                var block = heroEl && heroEl.closest('.deadline-block');
+                if (block) block.hidden = true;
+                if (launchEl) launchEl.textContent = '';
             }
         }());
     </script>

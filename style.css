@@ -424,6 +424,8 @@ input:focus {
 /* Section headings on pre-launch homepage — larger than legal-page h2 */
 .section--event h2,
 #how h2,
+#why h2,
+#founders h2,
 .final-cta h2 {
     font-size: clamp(1.4rem, 4vw, 2rem);
     font-weight: 700;
@@ -570,6 +572,16 @@ input:focus {
     border: 1px solid var(--color-border);
 }
 
+/* Event eyebrow label */
+.event-label {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-secondary);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
 /* Event date/venue lockup — reads like a poster */
 .event-lockup {
     display: flex;
@@ -627,6 +639,19 @@ input:focus {
 .final-cta .btn-appstore {
     display: block;
     margin: 0.25rem auto 0;
+}
+
+.final-cta-body {
+    font-size: 1.0625rem;
+    color: var(--color-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.final-cta-closer {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 1.125rem;
+    margin-bottom: 1.75rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
