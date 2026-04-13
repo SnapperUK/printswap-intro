@@ -137,7 +137,7 @@ Refine in CSS as needed; document changes here.
 | **Reading** | `40rem` (~640px) | `1.5rem` mobile, `2rem` ≥640px | Privacy, Pricing, Compliance, Terms, Support; any long-form text |
 | **Landing** | `52rem` (~832px) | Same | Homepage (and future campaign landings) so screenshots and CTAs breathe |
 
-**Today:** `main` is globally `40rem`, which squeezes the homepage hero row. **Target state:** `main` uses Reading width by default; homepage `main` gets a class e.g. `.main--landing` with `max-width: 52rem` (or outer wrapper). Until that refactor, treat this table as the spec to implement.
+**Implementation:** Default `main` uses `--layout-reading` (`40rem`). Homepage uses `<main class="main main--landing">` so `max-width` is `--layout-landing` (`52rem`). Footer width follows via `main.main--landing ~ .footer`. Legal pages omit `main--landing`.
 
 ### Section vertical rhythm
 
