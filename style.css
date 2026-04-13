@@ -372,29 +372,6 @@ input:focus {
     line-height: 1.45;
 }
 
-.hero .hero-ctas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.85rem;
-    margin: 0.5rem auto 0;
-    max-width: 22rem;
-}
-
-.hero .hero-ctas .btn-upload-primary--hero-primary {
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-}
-
-.hero .hero-ctas .btn-secondary--hero {
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-}
-
 /* Hero marketing graphic: full content column width (main max-width caps overall size) */
 .screenshots {
     display: block;
@@ -423,15 +400,6 @@ input:focus {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-
-/* Hero CTAs */
-.hero-ctas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 0.5rem;
 }
 
 /* Official Apple App Store badge (SVG asset — do not alter artwork) */
@@ -561,29 +529,6 @@ input:focus {
 .final-cta {
     text-align: center;
     padding-top: 1rem;
-}
-
-/* Responsive */
-@media (min-width: 640px) {
-    .hero-ctas {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .hero .hero-ctas {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: none;
-        gap: 1rem;
-    }
-
-    .hero .hero-ctas .btn-upload-primary--hero-primary,
-    .hero .hero-ctas .btn-secondary--hero {
-        width: auto;
-        flex: 1 1 12rem;
-        max-width: 16rem;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -784,16 +729,6 @@ input:focus {
     color: var(--color-secondary);
 }
 
-/* Mid-page App Store badge (after How it works) */
-.mid-download {
-    text-align: center;
-    margin: -0.5rem 0 2.25rem;
-}
-
-.mid-download .btn-appstore {
-    margin: 0 auto;
-}
-
 /* How it works — titled steps */
 .how-step-title {
     font-weight: 700;
@@ -806,15 +741,6 @@ input:focus {
     font-size: 0.9375rem;
     font-weight: 400;
     margin-top: 0.1rem;
-}
-
-/* Final CTA — Upload button + badge stacked */
-.final-cta .btn-upload-primary {
-    display: block;
-    max-width: 20rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
 }
 
 .final-cta .btn-appstore {
