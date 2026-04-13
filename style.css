@@ -431,12 +431,6 @@ input:focus {
     color: var(--color-primary);
 }
 
-/* Launch section */
-.section--launch {
-    border-left: 3px solid var(--color-primary);
-    padding-left: 1.5rem;
-}
-
 .section--launch .btn-primary {
     margin-top: 0.75rem;
 }

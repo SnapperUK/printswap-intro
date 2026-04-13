@@ -147,8 +147,8 @@ Refine in CSS as needed; document changes here.
 
 ### Inset blocks (accent rail)
 
-- **Launch / emphasis:** `border-left: 3px solid var(--color-primary)` + `padding-left: 1.5rem` (`.section--launch`)  
-- **Notes / quotes:** `border-left: 3px solid var(--color-border)` + muted text (`.how-note`, `.legal-draft` uses stronger left border — keep distinct purposes)
+- **Launch / founding block (`.section--launch`):** no left rail — aligns flush with other body sections.  
+- **Notes / quotes:** `border-left: 3px solid var(--color-border)` + muted text (`.how-note`); **legal draft** uses stronger left border — keep distinct purposes.
 
 ### Screenshots
 
