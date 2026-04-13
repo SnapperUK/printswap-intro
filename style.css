@@ -105,6 +105,7 @@ main {
 /* Landing homepage: wider column for hero + screenshots (STYLE_GUIDE_WEB §4) */
 main.main--landing {
     max-width: var(--layout-landing);
+    padding: 2.5rem 1.5rem 2.75rem;
 }
 
 /* Body sections on landing: explicit left alignment (hero / final-cta centre themselves) */
@@ -144,6 +145,21 @@ main.main--landing {
 
 .section:last-of-type {
     margin-bottom: 2rem;
+}
+
+/* Landing: no rule under hero; tighter vertical rhythm (overrides .hero / .section above) */
+main.main--landing .hero {
+    border-bottom: none;
+    margin-bottom: 2.75rem;
+    padding-bottom: 2rem;
+}
+
+.main--landing .section {
+    margin-bottom: 2.75rem;
+}
+
+.main--landing .section:last-of-type {
+    margin-bottom: 1.5rem;
 }
 
 /* Tally form embed */
@@ -201,6 +217,8 @@ main.main--landing {
 
 main.main--landing ~ .footer {
     max-width: var(--layout-landing);
+    border-top: none;
+    padding-top: 1.75rem;
 }
 
 .footer p {
@@ -228,6 +246,19 @@ main.main--landing ~ .footer {
     
     main {
         padding: 5rem 2rem;
+    }
+
+    main.main--landing {
+        padding: 3.75rem 2rem 3rem;
+    }
+
+    main.main--landing .hero {
+        margin-bottom: 3.25rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .main--landing .section {
+        margin-bottom: 3rem;
     }
     
     .hero {
@@ -441,7 +472,7 @@ input:focus {
 .final-cta h2 {
     font-size: clamp(1.4rem, 4vw, 2rem);
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.15rem;
     color: var(--color-primary);
 }
 
@@ -483,8 +514,7 @@ input:focus {
 /* Final CTA */
 .final-cta {
     text-align: center;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
 }
 
 /* Responsive */
@@ -646,9 +676,8 @@ input:focus {
 
 /* Founders callout */
 .founders-block {
-    margin-top: 1.75rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--color-border);
+    margin-top: 1rem;
+    padding-top: 0;
     font-size: 0.9375rem;
     color: var(--color-secondary);
 }
@@ -697,7 +726,7 @@ input:focus {
     font-weight: 700;
     color: var(--color-primary);
     font-size: 1.125rem;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.35rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
