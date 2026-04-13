@@ -487,10 +487,6 @@ input:focus {
     border-top: 1px solid var(--color-border);
 }
 
-.final-cta .btn-appstore {
-    margin-top: 0.5rem;
-}
-
 /* Responsive */
 @media (min-width: 640px) {
     .hero-ctas {
@@ -681,8 +677,14 @@ input:focus {
 }
 
 .final-cta .btn-appstore {
-    display: block;
-    margin: 0.25rem auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.75rem;
 }
 
 .final-cta-body {
