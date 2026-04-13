@@ -422,7 +422,7 @@ input:focus {
 }
 
 /* Section headings on pre-launch homepage — larger than legal-page h2 */
-.section--launch h2,
+.section--event h2,
 #how h2,
 .final-cta h2 {
     font-size: clamp(1.4rem, 4vw, 2rem);
@@ -431,7 +431,7 @@ input:focus {
     color: var(--color-primary);
 }
 
-.section--launch .btn-primary {
+.section--event .btn-primary {
     margin-top: 0.75rem;
 }
 
@@ -486,6 +486,158 @@ input:focus {
         transition: none;
     }
 }
+
+/* ============================================================
+   Pre-launch homepage v2 — dominance, urgency, event lockup
+   ============================================================ */
+
+/* Upload primary CTA — the single dominant action */
+.btn-upload-primary {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    text-decoration: none;
+    padding: 1rem 2.75rem;
+    min-height: 52px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    margin: 1.5rem 0 0.75rem;
+    transition: background-color 0.15s ease;
+}
+
+.btn-upload-primary:hover {
+    background-color: var(--color-link);
+    color: var(--color-on-primary);
+    text-decoration: none;
+}
+
+.btn-upload-primary:focus {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+}
+
+/* Secondary App Store badge — sits below the primary CTA */
+.btn-appstore--secondary {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+}
+
+.btn-appstore--secondary:hover {
+    opacity: 1;
+}
+
+/* Upload deadline block — urgency indicator */
+.deadline-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 2rem auto 0;
+    padding: 1rem 1.5rem 1.25rem;
+    background: color-mix(in srgb, var(--color-primary) 5%, var(--color-surface));
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    max-width: 18rem;
+}
+
+.deadline-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-secondary);
+}
+
+.deadline-date {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.1;
+}
+
+.deadline-remaining {
+    font-size: 0.9375rem;
+    color: var(--color-secondary);
+}
+
+/* Exhibition / event section */
+.section--event {
+    padding: 2rem 2rem 2rem;
+    background: color-mix(in srgb, var(--color-primary) 4%, var(--color-surface));
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+/* Event date/venue lockup — reads like a poster */
+.event-lockup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.event-date {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.1;
+}
+
+.event-venue {
+    font-size: 0.9375rem;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+/* Founders callout */
+.founders-block {
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.9375rem;
+    color: var(--color-secondary);
+}
+
+/* How it works — titled steps */
+.how-step-title {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.how-step-body {
+    display: block;
+    color: var(--color-secondary);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    margin-top: 0.1rem;
+}
+
+/* Final CTA — Upload button + badge stacked */
+.final-cta .btn-upload-primary {
+    display: block;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.final-cta .btn-appstore {
+    display: block;
+    margin: 0.25rem auto 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-upload-primary {
+        transition: none;
+    }
+}
+
+/* ============================================================
+   End pre-launch homepage v2
+   ============================================================ */
 
 /* ============================================================
    End pre-launch homepage v1

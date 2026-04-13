@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Print Swap — Exchange Prints, Not Followers</title>
-    <meta name="description" content="A platform where photographers and visual artists exchange physical prints directly. Launching 7 May at The Print Space.">
+    <meta name="description" content="A platform where photographers and visual artists exchange physical prints directly. Launching 7 May at The Print Space, Shoreditch. Upload deadline: 1 May.">
     <link rel="canonical" href="https://print-swap.com/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://print-swap.com/">
     <meta property="og:title" content="Print Swap — Exchange Prints, Not Followers">
-    <meta property="og:description" content="A platform where photographers and visual artists exchange physical prints directly. Launching 7 May at The Print Space.">
+    <meta property="og:description" content="A platform where photographers and visual artists exchange physical prints directly. Launching 7 May at The Print Space, Shoreditch.">
     <meta property="og:image" content="https://print-swap.com/assets/og-image.png">
     <meta property="og:site_name" content="Print Swap">
     <meta property="og:locale" content="en_GB">
@@ -19,7 +19,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Print Swap — Exchange Prints, Not Followers">
-    <meta name="twitter:description" content="A platform where photographers and visual artists exchange physical prints directly. Launching 7 May at The Print Space.">
+    <meta name="twitter:description" content="A platform where photographers and visual artists exchange physical prints directly. Launching 7 May at The Print Space, Shoreditch.">
     <meta name="twitter:image" content="https://print-swap.com/assets/og-image.png">
 
     <!-- Favicon -->
@@ -66,40 +66,53 @@
 
             <h1>Exchange prints,<br>not followers.</h1>
 
-            <p class="subheadline">Print Swap is a platform where photographers and visual artists exchange physical prints directly with each other.</p>
+            <p class="subheadline">A platform where photographers and visual artists exchange physical prints directly with each other.</p>
 
-            <p class="mechanism">You find work you'd clear a wall for. You propose a swap. If the other artist feels the same about yours, the exchange begins.</p>
+            <!-- FOUNDING DEADLINE: remove after 1 May -->
+            <div class="deadline-block">
+                <span class="deadline-label">Upload deadline</span>
+                <span class="deadline-date">1 May</span>
+                <span class="deadline-remaining" id="days-remaining" aria-live="polite"></span>
+            </div>
+            <!-- END FOUNDING DEADLINE -->
+
+            <a href="https://apps.apple.com/us/app/print-swap/id6752863046"
+               class="btn-upload-primary"
+               data-cta="upload_cta_click"
+               data-cta-location="hero">
+                Upload your work
+            </a>
+
+            <a href="https://apps.apple.com/us/app/print-swap/id6752863046"
+               class="btn-appstore btn-appstore--secondary"
+               data-cta="appstore_click"
+               data-cta-location="hero">
+                <img src="/assets/app-store-badge.svg"
+                     alt="Download on the App Store"
+                     class="appstore-badge-img"
+                     width="120"
+                     height="40"
+                     decoding="async">
+            </a>
 
             <div class="screenshots">
                 <img src="/assets/screenshots/screenshot-1.png" alt="Print Swap — browse the feed" width="1320" height="2869" loading="lazy" decoding="async">
                 <img src="/assets/screenshots/screenshot-2.png" alt="Print Swap — request a swap on an artwork" width="1321" height="2869" loading="lazy" decoding="async">
                 <img src="/assets/screenshots/screenshot-3.png" alt="Print Swap — track an active swap" width="1320" height="2869" loading="lazy" decoding="async">
             </div>
-            <!-- END SCREENSHOTS -->
-
-            <div class="hero-ctas">
-                <a href="https://apps.apple.com/us/app/print-swap/id6752863046"
-                   class="btn-appstore"
-                   data-cta="appstore_click"
-                   data-cta-location="hero">
-                    <img src="/assets/app-store-badge.svg"
-                         alt="Download on the App Store"
-                         class="appstore-badge-img"
-                         width="120"
-                         height="40"
-                         decoding="async">
-                </a>
-            </div>
         </header>
 
 
         <!-- ============================================================
-             Section 2: Founding Window
+             Section 2: Exhibition / Launch event
              REMOVE this entire section after 1 May
              ============================================================ -->
-        <section class="section section--launch" id="launch">
-            <h2>7 May — The Print Space, Shoreditch</h2>
-            <p>For the opening, we're exhibiting 50 prints curated from work uploaded before <strong>1 May</strong>.</p>
+        <section class="section section--event" id="launch">
+            <div class="event-lockup">
+                <span class="event-date">7 May 2026</span>
+                <span class="event-venue">The Print Space, Shoreditch</span>
+            </div>
+            <p>For the opening we are exhibiting 50 prints, curated from work uploaded before <strong>1 May</strong>.</p>
             <p>If your work is selected, it hangs that night. You become a permanent Founding Artist, and your work is live from the moment the first swaps open.</p>
             <a href="https://apps.apple.com/us/app/print-swap/id6752863046"
                class="btn-primary"
@@ -112,26 +125,41 @@
 
 
         <!-- ============================================================
-             Section 3: Why It Exists
+             Section 3: Why it exists + Founders
              ============================================================ -->
         <section class="section" id="why">
             <p>Most of our work now lives on screens.</p>
             <p>Print Swap is built around putting it back on walls.</p>
             <p>No buying or selling between artists. Two artists choose each other's work.</p>
-            <p>Print Swap started with a conversation between photographers Sam Faulkner and Simon Roberts, who wanted a way to exchange work directly without selling it and without chasing metrics.</p>
+
+            <div class="founders-block">
+                <p>Founded by <strong>Sam Faulkner</strong>, photographer, and <strong>Simon Roberts</strong>, photographer — two people who wanted a direct way to exchange work without selling it and without chasing metrics.</p>
+            </div>
         </section>
 
 
         <!-- ============================================================
-             Section 4: How It Works
+             Section 4: How it works
              ============================================================ -->
         <section class="section" id="how">
             <h2>How it works</h2>
             <ol class="how-list">
-                <li>Upload your work.</li>
-                <li>Browse the collection.</li>
-                <li>Propose a swap.</li>
-                <li>If it's mutual, the exchange begins.</li>
+                <li>
+                    <span class="how-step-title">Upload your work.</span>
+                    <span class="how-step-body">Photograph, print size, paper type.</span>
+                </li>
+                <li>
+                    <span class="how-step-title">Browse the collection.</span>
+                    <span class="how-step-body">Find work you'd clear a wall for.</span>
+                </li>
+                <li>
+                    <span class="how-step-title">Propose a swap.</span>
+                    <span class="how-step-body">The other artist sees your work and decides.</span>
+                </li>
+                <li>
+                    <span class="how-step-title">If it's mutual, the exchange begins.</span>
+                    <span class="how-step-body">Both prints are produced and dispatched.</span>
+                </li>
             </ol>
             <p class="how-note">Each artist covers the cost of their own outgoing print.<br>The Print Space handles production and fulfilment.</p>
         </section>
@@ -143,7 +171,13 @@
         <section class="section final-cta" id="download">
             <h2>Some images aren't meant to stay on a screen.</h2>
             <a href="https://apps.apple.com/us/app/print-swap/id6752863046"
-               class="btn-appstore"
+               class="btn-upload-primary"
+               data-cta="upload_cta_click"
+               data-cta-location="footer">
+                Upload your work
+            </a>
+            <a href="https://apps.apple.com/us/app/print-swap/id6752863046"
+               class="btn-appstore btn-appstore--secondary"
                data-cta="appstore_click"
                data-cta-location="footer">
                 <img src="/assets/app-store-badge.svg"
@@ -177,13 +211,29 @@
         <p class="copyright">© 2026 Print Swap Ltd</p>
     </footer>
 
-    <!-- Single delegated listener for all CTA tracking. No new libraries. -->
+    <!-- Delegated event tracking. No new libraries. -->
     <script>
         document.addEventListener('click', function (e) {
             var el = e.target.closest('[data-cta]');
             if (!el || typeof gtag !== 'function') return;
             gtag('event', el.dataset.cta, { location: el.dataset.ctaLocation });
         });
+
+        // Upload deadline countdown to 1 May 2026
+        // REMOVE after 1 May
+        (function () {
+            var deadline = new Date('2026-05-01T23:59:59');
+            var el = document.getElementById('days-remaining');
+            if (!el) return;
+            var diff = Math.ceil((deadline - new Date()) / (1000 * 60 * 60 * 24));
+            if (diff > 1) {
+                el.textContent = diff + ' days remaining';
+            } else if (diff === 1) {
+                el.textContent = 'Last day';
+            } else {
+                el.closest('.deadline-block').hidden = true;
+            }
+        }());
     </script>
 
 </body>
