@@ -490,13 +490,9 @@ input:focus {
     text-decoration: none;
 }
 
-/* Section headings on pre-launch homepage — larger than legal-page h2 */
-.section--event h2,
-#how h2,
-#why h2,
-#founders h2,
-.final-cta h2 {
-    font-size: clamp(1.4rem, 4vw, 2rem);
+/* Section headings on landing pages (main--landing) — larger than legal-page h2 */
+.main--landing .section h2 {
+    font-size: clamp(1.25rem, 3.25vw, 1.75rem);
     font-weight: 700;
     margin-bottom: 1.15rem;
     color: var(--color-primary);
