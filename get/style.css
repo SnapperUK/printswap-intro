@@ -94,7 +94,7 @@ h1 {
 
 .get-cta-badge {
     display: block;
-    width: min(100%, 236px);
+    width: min(100%, 180px);
     height: auto;
 }
 
@@ -123,6 +123,6 @@ h1 {
     }
 
     .get-cta-badge {
-        width: 236px;
+        width: 180px;
     }
 }
