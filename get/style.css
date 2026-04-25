@@ -68,29 +68,30 @@ h1 {
 }
 
 .get-cta {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    min-height: 3.5rem;
-    padding: 1rem 1.25rem;
+    max-width: 100%;
+    min-height: 44px;
     border-radius: 0.5rem;
-    color: var(--color-on-primary);
-    background: var(--color-primary);
-    font-size: 1.0625rem;
-    font-weight: 700;
-    line-height: 1.2;
     text-decoration: none;
+    transition: opacity 0.15s ease;
 }
 
 .get-cta:hover,
 .get-cta:focus-visible {
-    background: var(--color-link);
+    opacity: 0.88;
 }
 
 .get-cta:focus-visible {
     outline: 3px solid color-mix(in srgb, var(--color-link) 40%, var(--color-surface));
     outline-offset: 3px;
+}
+
+.get-cta-badge {
+    display: block;
+    width: min(100%, 236px);
+    height: auto;
 }
 
 .get-deadline {
@@ -117,8 +118,7 @@ h1 {
         padding-top: 1.75rem;
     }
 
-    .get-cta {
-        max-width: 22rem;
-        margin: 0 auto;
+    .get-cta-badge {
+        width: 236px;
     }
 }
