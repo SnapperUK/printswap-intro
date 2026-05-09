@@ -3,7 +3,7 @@
 **Audience:** Developers and designers working on `printswap-intro` (print-swap.com)  
 **Primary reference:** Print Swap iOS app style guide — in the app codebase: `docs/STYLE_GUIDE.md` and `docs/style-guide/*.md` (principles, colours, typography, spacing, components, accessibility)  
 **Scope:** Static marketing and legal pages (HTML + CSS)  
-**Last updated:** 2026-04-13
+**Last updated:** 2026-05-09
 
 ---
 
@@ -56,7 +56,7 @@ The app’s base palette lives in `DesignSystem/AppColors.swift` / `AppPalette`.
 
 | App role (conceptual) | AppPalette hex | Web CSS variable | Usage on site |
 |------------------------|----------------|------------------|---------------|
-| Dark Navy | `#003d5b` | `--color-primary` | Body text, headings, primary buttons, founding banner background |
+| Dark Navy | `#003d5b` | `--color-primary` | Body text, headings, primary buttons |
 | Medium Blue | `#30638e` | `--color-link` | Links, focus outline, hover on primary actions |
 | Gray | `#6b7280` | `--color-secondary` | Secondary / supporting text, footer, muted copy |
 | White | `#ffffff` | `--color-on-primary` | Text on dark banner, button label on filled primary |
@@ -113,7 +113,7 @@ Refine in CSS as needed; document changes here.
 |------|--------------|--------|--------|
 | Hero H1 | `clamp(2.25rem, 7vw, 4rem)` | 700 | Homepage hero only |
 | Page H1 (compact pages) | `2.5rem` → `3rem` ≥640px | 700 | Legal/support headers |
-| Section H2 (marketing) | `clamp(1.4rem, 4vw, 2rem)` | 700 | Launch, How it works, Final CTA |
+| Section H2 (marketing) | `clamp(1.4rem, 4vw, 2rem)` | 700 | How it works, Final CTA |
 | Section H2 (legal default) | `1.25rem` | 400 | Subdued legal subheads (existing pattern) |
 | Body | `1.125rem` → `1.1875rem` ≥640px | 400 | Default paragraphs |
 | Subhead / lead | `1.125rem` | 400 | Hero subheadline (primary colour) |
@@ -123,7 +123,7 @@ Refine in CSS as needed; document changes here.
 ### Alignment rule (fixes layout drift)
 
 - **Centred:** Only content inside **`.hero`** (logo, H1, subheadline, mechanism, `.screenshots`, `.hero-ctas`) and **`.final-cta`** (closing headline + App Store badge) and **`.footer`**.  
-- **Left-aligned:** All **`.section`** body copy, lists, launch block, “How it works”, and every **legal page** main column.  
+- **Left-aligned:** All **`.section`** body copy, lists, “How it works”, and every **legal page** main column.  
 - **Do not** centre long paragraphs outside the hero or final CTA.
 
 ---
@@ -147,7 +147,6 @@ Refine in CSS as needed; document changes here.
 
 ### Inset blocks (accent rail)
 
-- **Launch / founding block (`.section--launch`):** no left rail — aligns flush with other body sections.  
 - **Notes / quotes:** `border-left: 3px solid var(--color-border)` + muted text (`.how-note`); **legal draft** uses stronger left border — keep distinct purposes.
 
 ### Screenshots
@@ -159,12 +158,6 @@ Refine in CSS as needed; document changes here.
 ---
 
 ## 5. Components
-
-### Founding banner (`.founding-banner`)
-
-- Full width, `background: var(--color-primary)`, `color: var(--color-on-primary)`  
-- Centred text, small type (~0.9rem)  
-- **Removal:** delete entire block after 1 May (see [Maintenance](#8-maintenance))
 
 ### Primary button (`.btn-primary`)
 
@@ -223,18 +216,20 @@ Refine in CSS as needed; document changes here.
 
 ## 8. Maintenance
 
-### Post–1 May (founding campaign)
+### Post-launch cleanup (completed 2026-05-09)
 
-Remove or rewrite:
+The 1 May upload deadline and 7 May launch exhibition have passed. The following pre-launch UI was retired:
 
-1. `.founding-banner` block in `index.html`  
-2. Secondary hero CTA (“Upload your work before 1 May”)  
-3. Entire `#launch` section  
-4. Copy that references founding exhibition / 1 May deadline elsewhere on the homepage
+- `.founding-banner` strip on the homepage and `/open-call` (component removed)  
+- `#launch` exhibition callout section on the homepage  
+- Hero launch-announcement lines and the upload-deadline countdown script  
+- 1 May / 7 May references in homepage `<head>` meta, OG, and Twitter copy  
+- `/open-call` campaign page (deleted; 301 to `/`, see `_redirects`)  
+- `.get-deadline` line on `/get` (and its CSS rule)
 
-### Post–7 May (swaps live)
+### Future homepage refresh (post-launch messaging)
 
-Replace homepage with post-launch messaging; keep this guide’s **Page types** and **Colour** sections. Update hero/final CTA copy; screenshots may change.
+The homepage is currently a stripped pre-launch page minus the campaign UI. When swap volume picks up, replace hero copy and screenshots with post-launch messaging; keep this guide’s **Page types** and **Colour** sections as the canonical reference.
 
 ### CSS hygiene
 
