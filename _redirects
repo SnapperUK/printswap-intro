@@ -4,3 +4,7 @@
 /compliance.html /compliance 301
 /terms.html /terms 301
 /support.html /support 301
+
+# Retired campaign pages
+/open-call/* / 301
+/open-call / 301
