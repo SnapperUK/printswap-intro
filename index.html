@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Print Swap: Exchange Prints, Not Followers</title>
-    <meta name="description" content="A platform where photographers and visual artists exchange physical prints directly. Launching 7 May at The Print Space, Shoreditch. Upload deadline: 1 May.">
+    <meta name="description" content="A platform where photographers and visual artists exchange physical prints directly with each other.">
     <link rel="canonical" href="https://print-swap.com/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://print-swap.com/">
     <meta property="og:title" content="Print Swap: Exchange Prints, Not Followers">
-    <meta property="og:description" content="A platform where photographers and visual artists exchange physical prints directly with each other. Launching 7 May at The Print Space, Shoreditch.">
+    <meta property="og:description" content="A platform where photographers and visual artists exchange physical prints directly with each other.">
     <meta property="og:image" content="https://print-swap.com/assets/og-image.png">
     <meta property="og:site_name" content="Print Swap">
     <meta property="og:locale" content="en_GB">
@@ -19,7 +19,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Print Swap: Exchange Prints, Not Followers">
-    <meta name="twitter:description" content="A platform where photographers and visual artists exchange physical prints directly with each other. Launching 7 May at The Print Space, Shoreditch.">
+    <meta name="twitter:description" content="A platform where photographers and visual artists exchange physical prints directly with each other.">
     <meta name="twitter:image" content="https://print-swap.com/assets/og-image.png">
 
     <!-- Favicon -->
@@ -45,12 +45,6 @@
 </head>
 <body>
 
-    <!-- FOUNDING BANNER: remove this entire block after 1 May -->
-    <div class="founding-banner">
-        Founding Window: Upload before <strong>1 May</strong> to be considered for the launch exhibition.
-    </div>
-    <!-- END FOUNDING BANNER -->
-
     <main class="main main--landing">
 
         <!-- ============================================================
@@ -67,12 +61,6 @@
             <h1>Exchange prints,<br>not followers</h1>
 
             <p class="hero-mechanism-line">You propose a swap. If the other artist feels the same about yours, the exchange begins.</p>
-
-            <div class="hero-launch-lines">
-                <p class="hero-launch-announce">Print Swap launches at The Print Space on 7 May.</p>
-                <p class="hero-launch-announce">We're exhibiting 50 founding prints, curated from uploads received before 1 May.</p>
-                <p class="hero-launch-announce">Upload yours to be considered.</p>
-            </div>
 
             <p class="hero-upload-note">Uploads are submitted through the Print Swap app.</p>
 
@@ -97,36 +85,7 @@
 
 
         <!-- ============================================================
-             Section 2: Exhibition callout
-             REMOVE this entire section after 1 May
-             ============================================================ -->
-        <section class="section section--event" id="launch">
-            <div class="event-header">
-                <p class="event-label">Launch exhibition, limited to 50</p>
-                <div class="event-lockup">
-                    <span class="event-date">7 May 2026</span>
-                    <span class="event-venue">The Print Space, Shoreditch</span>
-                </div>
-                <p class="event-countdown" id="event-days-remaining" aria-live="polite"></p>
-            </div>
-            <ul class="event-highlights">
-                <li><strong>50 founding prints</strong> selected from uploads before <strong>1 May</strong>.</li>
-                <li><strong>Selected works</strong> are produced and exhibited by The Print Space at no cost to the artist.</li>
-                <li><strong>Founding Artists</strong> are the 50 photographers selected for Print Swap's launch. This permanent distinction is visibly marked in the app, recognising their role in establishing the platform from day one.</li>
-            </ul>
-            <p class="event-scarcity">Exhibition deadline: <strong>1 May</strong>. Print Swap continues after that, but there will only ever be 50 Founding Artists.</p>
-            <a href="https://apps.apple.com/app/print-swap/id6752863046"
-               class="btn-primary btn-primary--block"
-               data-cta="upload_cta_click"
-               data-cta-location="launch">
-                Upload before 1 May, <span id="launch-days-remaining" aria-live="polite"></span>
-            </a>
-        </section>
-        <!-- END FOUNDING SECTION -->
-
-
-        <!-- ============================================================
-             Section 3: Why it exists
+             Section 2: Why it exists
              ============================================================ -->
         <section class="section" id="why">
             <h2>Most of your work will never leave a screen.</h2>
@@ -137,7 +96,7 @@
 
 
         <!-- ============================================================
-             Section 4: How it works
+             Section 3: How it works
              ============================================================ -->
         <section class="section" id="how">
             <h2>Four steps. Two artists. One exchange.</h2>
@@ -163,7 +122,7 @@
 
 
         <!-- ============================================================
-             Section 5: Founding story
+             Section 4: Founding story
              ============================================================ -->
         <section class="section" id="founders">
             <h2>Built by Photographers for Photographers.</h2>
@@ -174,7 +133,7 @@
 
 
         <!-- ============================================================
-             Section 6: Final CTA
+             Section 5: Final CTA
              ============================================================ -->
         <section class="section final-cta" id="download">
             <h2>You didn't make it to be scrolled past.</h2>
@@ -230,27 +189,6 @@
             if (!el || typeof gtag !== 'function') return;
             gtag('event', el.dataset.cta, { location: el.dataset.ctaLocation });
         });
-
-        // Upload deadline countdown to 1 May 2026
-        // REMOVE after 1 May
-        (function () {
-            var deadline = new Date('2026-05-01T23:59:59');
-            var diff = Math.ceil((deadline - new Date()) / (1000 * 60 * 60 * 24));
-
-            var eventEl = document.getElementById('event-days-remaining');
-            var launchEl = document.getElementById('launch-days-remaining');
-
-            if (diff > 1) {
-                if (eventEl) eventEl.textContent = diff + ' days remaining';
-                if (launchEl) launchEl.textContent = diff + ' days remaining';
-            } else if (diff === 1) {
-                if (eventEl) eventEl.textContent = 'Last day';
-                if (launchEl) launchEl.textContent = 'last day';
-            } else {
-                if (eventEl) eventEl.hidden = true;
-                if (launchEl) launchEl.textContent = '';
-            }
-        }());
     </script>
 
 </body>

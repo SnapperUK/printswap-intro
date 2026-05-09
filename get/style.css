@@ -98,14 +98,6 @@ h1 {
     height: auto;
 }
 
-.get-deadline {
-    max-width: 20rem;
-    margin: 0.875rem auto 0;
-    font-size: 0.875rem;
-    line-height: 1.4;
-    color: var(--color-secondary);
-}
-
 @media (min-width: 48rem) {
     .get-page {
         max-width: 40rem;

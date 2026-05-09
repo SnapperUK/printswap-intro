@@ -334,20 +334,6 @@ input:focus {
    Remove or replace after 7 May
    ============================================================ */
 
-/* Founding banner */
-.founding-banner {
-    background-color: var(--color-primary);
-    color: var(--color-on-primary);
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 0.65rem 1.5rem;
-    line-height: 1.4;
-}
-
-.founding-banner strong {
-    color: var(--color-on-primary);
-}
-
 /* Hero — pre-launch layout */
 .hero h1 {
     font-size: clamp(2.25rem, 7vw, 4rem);
