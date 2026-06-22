@@ -136,6 +136,41 @@
         }
 
         /* Assets grid */
+        .press-rights {
+            font-size: 0.95rem;
+            color: var(--color-secondary);
+            margin: 0 0 1rem;
+        }
+        .press-kit-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 0 0 1.5rem;
+        }
+        .press-kit-btn {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 999px;
+            background: var(--color-primary);
+            color: #ffffff;
+            border: 1px solid var(--color-primary);
+        }
+        .press-kit-btn:hover,
+        .press-kit-btn:focus-visible {
+            background: color-mix(in srgb, var(--color-primary) 85%, #000);
+        }
+        .press-kit-btn--secondary {
+            background: transparent;
+            color: var(--color-primary);
+        }
+        .press-kit-btn--secondary:hover,
+        .press-kit-btn--secondary:focus-visible {
+            background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+        }
         .press-assets {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -317,6 +352,11 @@
         <section class="section">
             <h2>Assets</h2>
             <p>Direct downloads. Each file is described so you know what it is before downloading.</p>
+            <p class="press-rights">All assets on this page are cleared for editorial use in coverage of Print Swap. Please credit: <strong>Courtesy of Print Swap</strong>, unless a different credit is shown.</p>
+            <div class="press-kit-actions">
+                <a class="press-kit-btn" href="/assets/press/print-swap-press-kit.zip" download>Download full press kit (ZIP)</a>
+                <a class="press-kit-btn press-kit-btn--secondary" href="/assets/press/print-swap-press-release.pdf" download>Press release (PDF)</a>
+            </div>
             <div class="press-assets">
 
                 <div class="asset-card">
@@ -476,7 +516,7 @@
 
         <section class="section">
             <h2>Press contact</h2>
-            <p>For press enquiries, interviews, or additional assets, contact <a href="mailto:sam@print-swap.com">sam@print-swap.com</a>.</p>
+            <p>For press enquiries, interviews, or additional assets, contact <!--email_off--><a href="mailto:sam@print-swap.com">sam@print-swap.com</a><!--/email_off-->.</p>
             <p>Instagram: <a href="https://www.instagram.com/print.swap" target="_blank" rel="noopener noreferrer">@print.swap</a></p>
         </section>
     </main>

@@ -1,0 +1,52 @@
+PRINT SWAP — CAPTIONS & CREDITS
+
+Last updated: 22 June 2026
+
+Use the credit shown with each image. Default credit for Print Swap-owned
+assets is "Courtesy of Print Swap". Artist artworks must be credited
+exactly as shown and must not be cropped or altered.
+
+----------------------------------------------------------------------
+
+PRINT SWAP ASSETS  —  credit: Courtesy of Print Swap
+
+print-swap-logo.png / print-swap-logo.svg
+  Print Swap logo on a transparent background. PNG (raster) and SVG (vector).
+
+print-swap-framed-print-hero.jpg
+  Hero / lifestyle image: a framed photographic print leaning against a wall.
+
+screenshot-feed01.jpg
+  App screenshot — Feed (1): the main browsing experience. Prints presented
+  as physical objects, not images in a grid.
+
+screenshot-feed02.jpg
+  App screenshot — Feed (2): a second view of the feed.
+
+screenshot-artwork-detail.jpg
+  App screenshot — Artwork detail / Request Swap: individual work view
+  showing print specifications and the Request Swap action.
+
+screenshot-confirm-swap.jpg
+  App screenshot — Confirm Swap Request: a swap being confirmed. The cost
+  shown covers production and shipping. Artists are not buying or selling
+  each other's work.
+
+sam-faulkner-founder.jpg
+  Founder image: photograph of founder Sam Faulkner.
+
+----------------------------------------------------------------------
+
+ARTIST ARTWORKS  —  credit required exactly as shown; do not crop or alter
+
+Simon_Roberts_St_James_Park_Print_Swap.jpg
+  "St James' Park, London".            Credit: © Simon Roberts
+
+Marcus_Bleasdale_Child_Soldier_Print_Swap.jpg
+  "Child Soldier".                      Credit: © Marcus Bleasdale
+
+Amin_Khelghat_Pattern_Print_Swap.jpg
+  "Pattern".                            Credit: © Amin Khelghat
+
+Will_Pryce_Biblioteca_Marciana_Print_Swap.jpg
+  "Biblioteca Marciana".               Credit: © Will Pryce
