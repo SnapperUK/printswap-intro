@@ -89,15 +89,15 @@
 
         .press-rule {
             border: 0;
-            border-top: 1px solid var(--color-border);
+            border-top: 1px solid rgba(0, 61, 91, 0.35);
             margin: 0 0 2.75rem;
         }
 
         /* Four steps */
         .press-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.75rem 1.25rem;
+            grid-template-columns: 1fr;
+            gap: 1.75rem;
             margin: 0;
         }
         /* Each step carries its own brand colour, matching the printed release. */
@@ -109,25 +109,22 @@
         .press-step--trade { --accent: #d1495b; }     /* coral red */
         .press-step--fulfilment { --accent: #edae49; }/* golden amber */
         .press-step-icon img {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             display: block;
-            margin: 0 auto;
         }
         .press-step h3 {
-            margin: 0.7rem 0 0.4rem;
+            margin: 0.85rem 0 0.45rem;
             text-transform: uppercase;
             letter-spacing: 0.06em;
             font-size: 0.9375rem;
             color: var(--accent);
-            text-align: center;
         }
         .press-step p {
             margin: 0;
             font-size: 0.9375rem;
             color: var(--color-secondary);
             line-height: 1.5;
-            text-align: justify;
         }
 
         /* Assets grid */
@@ -205,6 +202,23 @@
                 grid-template-columns: 1fr 1fr;
                 gap: 2.5rem;
             }
+            /* Four columns with thin vertical dividers between them, like the release. */
+            .press-steps {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0;
+            }
+            .press-step {
+                padding: 0 1.5rem;
+            }
+            .press-step:first-child {
+                padding-left: 0;
+            }
+            .press-step:last-child {
+                padding-right: 0;
+            }
+            .press-step:not(:first-child) {
+                border-left: 1px solid rgba(0, 61, 91, 0.3);
+            }
         }
     </style>
 </head>
@@ -273,7 +287,7 @@
                         <img src="/assets/press/icons/step-trade.svg" alt="" width="40" height="40" loading="lazy">
                     </span>
                     <h3>Direct trade</h3>
-                    <p>No sales. No commissions. No popularity contests.</p>
+                    <p>No sales.<br>No commissions.<br>No popularity contests.</p>
                 </div>
                 <div class="press-step press-step--fulfilment">
                     <span class="press-step-icon">
