@@ -96,14 +96,19 @@ Pairings intended for production:
 
 ## 3. Typography
 
-### Font choice vs app
+### Font choice (aligned with app)
+
+As of June 2026 a **GT Ultra web licence (Grilli Type)** is held, so the site now uses the same brand faces as the app.
 
 | Platform | Family | Notes |
 |----------|--------|--------|
-| iOS app | GT Ultra / GT Ultra Fine | Licensed for app embedding; see app `03-typography.md` |
-| Website | **Quattrocento Sans** (Google Fonts) + system fallbacks | Web-licensed, close in spirit (humanist, calm). **Do not** use `.font(.system)` equivalents as arbitrary stacks; keep Quattrocento Sans as the brand web face unless GT Ultra gains a web licence |
+| iOS app | GT Ultra / GT Ultra Fine | Licensed for app + web embedding; see app `03-typography.md` |
+| Website | **GT Ultra** (headings) + **GT Ultra Fine** (body) | Self-hosted woff2/woff in `/assets/fonts/`, declared via `@font-face` in `style.css`. Stacks are set via `--font-heading` / `--font-body`. **Regular weight only** is licensed/available, matching the app; heavier weights are faux-bold by the browser. Fallbacks: Quattrocento (Google Fonts) then system. |
 
-Optional display accent: **Quattrocento** for rare marketing headlines only if you extend the font link — default is Quattrocento Sans throughout for simplicity.
+**Do:** reference `var(--font-heading)` / `var(--font-body)` in new rules.
+**Don't:** add arbitrary font stacks or re-introduce Quattrocento Sans as the primary face. The GT Ultra files are licensed assets — do not redistribute them outside this site's `/assets/fonts/`.
+
+The Quattrocento Google Fonts `<link>` is retained on pages as a graceful fallback while GT Ultra loads; it is no longer the brand face.
 
 ### Type scale (current contract)
 

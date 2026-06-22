@@ -1,9 +1,28 @@
 /* Print Swap Intro Site
    =====================
    Design principles: Restraint, quiet confidence, mobile-first, ages well.
-   Font: Quattrocento Sans (sans-serif)
+   Font: GT Ultra (headings) + GT Ultra Fine (body) — brand faces, web licence held.
    Tokens: see docs/STYLE_GUIDE_WEB.md
 */
+
+/* Brand typeface — GT Ultra (headings) + GT Ultra Fine (body).
+   Web licence held (Grilli Type). Regular weight only; see docs/STYLE_GUIDE_WEB.md §3. */
+@font-face {
+    font-family: 'GT Ultra';
+    src: url('/assets/fonts/GTUltra-Regular.woff2') format('woff2'),
+         url('/assets/fonts/GTUltra-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GT Ultra Fine';
+    src: url('/assets/fonts/GTUltraFine-Regular.woff2') format('woff2'),
+         url('/assets/fonts/GTUltraFine-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --color-primary: #003d5b;
@@ -15,6 +34,8 @@
     --color-sep: #9ca3af;
     --layout-reading: 40rem;
     --layout-landing: 52rem;
+    --font-heading: 'GT Ultra', 'Quattrocento Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'GT Ultra Fine', 'Quattrocento', Georgia, 'Times New Roman', serif;
 }
 
 /* Reset and base */
@@ -30,7 +51,7 @@ html {
 }
 
 body {
-    font-family: 'Quattrocento Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--font-body);
     font-size: 1.125rem; /* 18px */
     line-height: 1.7;
     color: var(--color-primary);
@@ -42,7 +63,7 @@ body {
 
 /* Typography */
 h1, h2 {
-    font-family: 'Quattrocento Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.3;
     color: var(--color-primary);
@@ -60,6 +81,7 @@ h2 {
 }
 
 h3 {
+    font-family: var(--font-heading);
     font-size: 1.0625rem; /* 17px */
     margin: 1.25rem 0 0.75rem;
     font-weight: 700;
