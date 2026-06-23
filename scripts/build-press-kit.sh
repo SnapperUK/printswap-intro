@@ -3,7 +3,7 @@
 # Build the Print Swap press kit ZIP from the canonical press assets.
 #
 # Re-run this whenever any included asset, the press release, the fact
-# sheet, or captions/credits sheet changes. A press kit ZIP is a
+# sheet, captions/credits sheet, or founder biography changes. A press kit ZIP is a
 # static snapshot: if you do not rebuild it, it silently goes stale.
 #
 # Artist artworks are included on the clause 6.2 basis recorded in the
@@ -49,6 +49,7 @@ cp "$INTRO_PRESS/print-swap-framed-print-hero.jpg"  "$KIT/Brand imagery/"
 
 # Founder
 cp "$INTRO_PRESS/sam-faulkner-founder.jpg"  "$KIT/Founder/"
+cp "$INTRO_PRESS/sam-faulkner-biography.txt"  "$KIT/Founder/"
 
 # Artist artworks (clause 6.2 basis; see press asset tracker). Credit
 # exactly as listed in print-swap-captions-and-credits.txt; do not crop.
