@@ -3,7 +3,7 @@
 # Build the Print Swap press kit ZIP from the canonical press assets.
 #
 # Re-run this whenever any included asset, the press release, the fact
-# sheet, captions/credits sheet, or artist biographies file changes. A press kit ZIP is a
+# sheet, or captions/credits sheet changes. A press kit ZIP is a
 # static snapshot: if you do not rebuild it, it silently goes stale.
 #
 # Artist artworks are included on the clause 6.2 basis recorded in the
@@ -29,7 +29,6 @@ mkdir -p \
 # Top-level reference docs (so they are seen first)
 cp "$INTRO_PRESS/print-swap-fact-sheet.txt"            "$KIT/"
 cp "$INTRO_PRESS/print-swap-captions-and-credits.txt"  "$KIT/"
-cp "$INTRO_PRESS/artist-biographies.txt"               "$KIT/"
 
 # Press release
 cp "$INTRO_PRESS/print-swap-press-release.pdf"  "$KIT/Press release/"
