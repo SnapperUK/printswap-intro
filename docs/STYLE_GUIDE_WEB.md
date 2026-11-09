@@ -158,7 +158,7 @@ Refine in CSS as needed; document changes here.
 
 - Grid: `repeat(auto-fit, minmax(160px, 1fr))` mobile; three columns ≥640px where space allows  
 - Images: `max-width: 280px`, `border-radius: 16px`, light shadow — do not crop in a way that hides the “two prints / swap” idea  
-- Lazy-load images; provide `width` and `height` attributes matching intrinsic dimensions to limit CLS
+- Lazy-load images below the first screen only. The homepage hero graphic is in the first screen at every width, so it loads eagerly with `fetchpriority="high"` (lazy-loading it delays the page's main image). Always provide `width` and `height` attributes matching intrinsic dimensions to limit CLS
 
 ---
 

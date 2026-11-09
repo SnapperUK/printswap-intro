@@ -762,12 +762,11 @@ input:focus {
     letter-spacing: 0.07em;
 }
 
-/* Founders callout */
+/* Founders callout: body size and primary colour, not small print */
 .founders-block {
     margin-top: 1rem;
     padding-top: 0;
-    font-size: 0.9375rem;
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 /* How it works — titled steps */
