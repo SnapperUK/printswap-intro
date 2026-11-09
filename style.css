@@ -821,3 +821,9 @@ input:focus {
 /* ============================================================
    End pre-launch homepage v1
    ============================================================ */
+
+/* Home hero: each sentence on its own line, wrapped evenly on narrow screens */
+.hero h1 .h1-line {
+    display: block;
+    text-wrap: balance;
+}
