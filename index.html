@@ -34,14 +34,7 @@
 
     <link rel="stylesheet" href="/style.css?v=20261109-quick-fixes">
 
-    <!-- GA4: replace G-XXXXXXXXXX with your Measurement ID before shipping -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
+    <script defer src="/consent.js?v=20261110"></script>
 </head>
 <body>
 
@@ -179,15 +172,6 @@
         </div>
         <p class="copyright">© 2026 Print Swap Ltd</p>
     </footer>
-
-    <!-- Delegated event tracking. No new libraries. -->
-    <script>
-        document.addEventListener('click', function (e) {
-            var el = e.target.closest('[data-cta]');
-            if (!el || typeof gtag !== 'function') return;
-            gtag('event', el.dataset.cta, { location: el.dataset.ctaLocation });
-        });
-    </script>
 
 </body>
 </html>
