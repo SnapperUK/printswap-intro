@@ -15,6 +15,7 @@
     var GA_ID = 'G-VPE3T276G6';
     var KEY = 'ps-analytics-consent'; // 'granted' | 'denied'
     var loaded = false;
+    var consented = false; // current choice on this page; gates tap events
 
     function getChoice() {
         try { return localStorage.getItem(KEY); } catch (e) { return null; }
@@ -25,7 +26,12 @@
     }
 
     function loadAnalytics() {
-        if (loaded) return;
+        consented = true;
+        if (loaded) {
+            // Accepted again after a Decline on this page: re-grant.
+            window.gtag('consent', 'update', { analytics_storage: 'granted' });
+            return;
+        }
         loaded = true;
         window.dataLayer = window.dataLayer || [];
         window.gtag = function () { window.dataLayer.push(arguments); };
@@ -44,6 +50,7 @@
     }
 
     function stopAnalytics() {
+        consented = false;
         if (typeof window.gtag === 'function') {
             window.gtag('consent', 'update', { analytics_storage: 'denied' });
         }
@@ -141,7 +148,7 @@
     // App Store button taps (only sent once analytics is on).
     document.addEventListener('click', function (e) {
         var el = e.target.closest && e.target.closest('[data-cta]');
-        if (!el || typeof window.gtag !== 'function') return;
+        if (!el || !consented || typeof window.gtag !== 'function') return;
         window.gtag('event', el.dataset.cta, { location: el.dataset.ctaLocation || '' });
     });
 
