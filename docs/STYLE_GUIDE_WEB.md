@@ -2,8 +2,8 @@
 
 **Audience:** Developers and designers working on `printswap-intro` (print-swap.com)  
 **Primary reference:** Print Swap iOS app style guide — in the app codebase: `docs/STYLE_GUIDE.md` and `docs/style-guide/*.md` (principles, colours, typography, spacing, components, accessibility)  
-**Scope:** Static marketing and legal pages (HTML + CSS)  
-**Last updated:** 2026-05-09
+**Scope:** Static marketing and legal pages (HTML + CSS), and signed-in tool pages such as `/upload` (added 2026-11-12)  
+**Last updated:** 2026-11-12
 
 ---
 
@@ -15,8 +15,8 @@
 | Colours and CSS variables | [Colour](#2-colour) |
 | Fonts and hierarchy | [Typography](#3-typography) |
 | Columns, alignment, rhythm | [Spacing and layout](#4-spacing-and-layout) |
-| Buttons, banners, media | [Components](#5-components) |
-| Which layout for which page | [Page types](#6-page-types) |
+| Buttons, banners, media, corner sizes, spec colours | [Components](#5-components) |
+| Which layout for which page (including tool pages) | [Page types](#6-page-types) |
 | Contrast, focus, tap targets | [Accessibility](#7-accessibility) |
 | Post-launch and housekeeping | [Maintenance](#8-maintenance) |
 
@@ -44,7 +44,7 @@ Print Swap connects artists through mutual admiration and physical prints. The s
 
 ### Page-type awareness (web-specific)
 
-Every new page must be classified as **Landing** or **Reading** before layout work begins. Mixing rules (e.g. centring body copy that should read in a narrow column) creates the “inset vs wide vs centred” confusion seen when one `max-width` is used for everything.
+Every new page must be classified as **Landing**, **Reading** or **Workspace** before layout work begins. Mixing rules (e.g. centring body copy that should read in a narrow column) creates the “inset vs wide vs centred” confusion seen when one `max-width` is used for everything.
 
 ---
 
@@ -64,7 +64,33 @@ The app’s base palette lives in `DesignSystem/AppColors.swift` / `AppPalette`.
 | (border) | `#e5e5e5` | `--color-border` | Dividers, hero/footer borders, subtle rules |
 | Black (badge) | `#000000` | — | App Store badge only (Apple asset; do not recolour) |
 
-**Not used on the current static site** (reserved for parity if components grow): Coral Red, Golden Amber, Teal — see app `02-colors.md` for semantic roles (success, warning, destructive). Do not introduce them ad hoc; add variables here if marketing or forms need them.
+**Coral Red, Golden Amber and Teal** are used only on signed-in **tool pages** (see [Page types](#6-page-types)), as set out below. Marketing and reading pages still do not use them. Roles follow the app's `02-colors.md`. Do not introduce them anywhere else ad hoc; add them here first.
+
+### Tool pages: status colours
+
+| Role | Colour | Use |
+|------|--------|-----|
+| Invalid / error | Coral Red `#d1495b` | Banner border and a 10% tint. The message itself stays `--color-primary`: coral text on white is 4.4:1, under AA for small text |
+| Valid / success | Teal `#00798c` | Same pattern (5.1:1) |
+| Warning | Golden Amber `#edae49` | Same pattern; never as text (1.9:1 on white) |
+
+Form boundaries (inputs, selects, checkboxes) use `--color-secondary` `#6b7280` (4.6:1). Dividers keep `--color-border` `#e5e5e5`. Tool pages also use `--color-field` for the inside of inputs and cards: `#ffffff` in light mode.
+
+### Tool pages: dark mode
+
+Tool pages follow the visitor's system setting (`prefers-color-scheme`). There is no toggle. Marketing and reading pages stay light.
+
+| Token | Light | Dark |
+|-------|-------|------|
+| `--color-primary` (text, filled buttons) | `#003d5b` | `#e9eef2` |
+| `--color-on-primary` | `#ffffff` | `#0d1a22` |
+| `--color-link` (links, focus ring) | `#30638e` | `#8ab4d6` |
+| `--color-secondary` | `#6b7280` | `#9fb0bc` |
+| `--color-surface` (page) | `#fafafa` | `#0d1a22` |
+| `--color-field` (inputs, cards) | `#ffffff` | `#14252f` |
+| `--color-border` | `#e5e5e5` | `#243743` |
+
+A print shown on its paper stays a light sheet in both modes, because paper is paper.
 
 ### Implementation
 
@@ -164,10 +190,22 @@ Refine in CSS as needed; document changes here.
 
 ## 5. Components
 
+### Shapes and weight
+
+| Element | Corner |
+|---------|--------|
+| Buttons, fields, checkboxes | `4px` |
+| Boxes, frames, tiles, rows, banners, dialogs | `8px` |
+| Screenshots | `16px` |
+| A sheet of paper (print preview) | `2px` |
+| Pills (`999px`) | Only the event countdown. Buttons on the web are not pills; the app's are, and that difference is deliberate |
+
+Weight: the page headline (`h1`) and buttons use `700`; everything else uses `400`. GT Ultra and GT Ultra Fine ship in Regular only, so browsers synthesise the 700.
+
 ### Primary button (`.btn-primary`)
 
 - Filled `var(--color-primary)`, white text, `min-height: 44px`, rounded corners (~4px)  
-- Hover: shift toward `var(--color-link)` or slightly lighter navy — keep one hover rule sitewide
+- Hover: background shifts to `var(--color-link)` — one hover rule sitewide
 
 ### Secondary button (`.btn-secondary`)
 
@@ -179,6 +217,22 @@ Refine in CSS as needed; document changes here.
 - Wrapper is transparent; **never** draw an extra black box behind Apple’s badge  
 - Badge image: preserve aspect ratio; typical display height ~40–44px  
 - Apple’s artwork must not be modified (colours, cropping of badge graphic)
+
+### Choices and spec colours (tool pages)
+
+When a tool page asks the visitor to choose a size, paper, border or edition, or shows the result, use the app's category colours (`AppColors.swift`, `BadgeTokens.swift`). Do not invent another scheme. (The older hex table in the app's `GOVERNED_BADGE_SYSTEM.md` does not match the app's code and must not be used.)
+
+| Category | Colour | Text on the full colour | Words on the pale row |
+|----------|--------|--------------------------|------------------------|
+| Size | Coral Red `#d1495b` | White (4.4:1; the app's own colour, so kept) | `#b84050` (dark mode `#da6c7a`) |
+| Paper | Teal `#00798c` | White (5.1:1) | `#007588` (dark `#409aa9`) |
+| Borders | Golden Amber `#edae49` | Brand navy `#003d5b` (5.9:1; white fails) | `#8c672b` (dark `#edae49`) |
+| Edition | Medium Blue `#30638e` | White (6.4:1) | `#30638e` (dark `#6c90af`) |
+
+- **A chosen option** is the full category colour. **The others** are a 10% tint of it (16% in dark mode) with a 25% line (35% in dark). Drop-downs take the 10% tint and keep the grey field boundary.
+- **Summary rows** (the page's recap of the choices) use an 8% tint (16% in dark mode), the category's own colour for the icon, and the deeper "words" shade above for the text. The app's exact colours are too pale for text on a web page (amber 1.8:1, coral 3.8:1), so the words use the deeper shade, 4.6:1 or better on the tint.
+- **Badges** use a `6px` corner, as the app.
+- Icons come from the app's own set (Phosphor, MIT), not hand-drawn ones.
 
 ### Legal draft (`.legal-draft`)
 
@@ -203,8 +257,18 @@ Refine in CSS as needed; document changes here.
 |------|----------|----------------------|----------------|
 | **Reading** | `/privacy`, `/pricing`, `/compliance`, `/terms`, `/support` | Reading column `40rem` | Left |
 | **Landing** | `/` (homepage) | Landing column `52rem` | Hero + final CTA centred; sections left |
+| **Workspace** (signed-in tool page) | `/upload` | Up to `1180px`, two columns: the object on the left, the form on the right | Left |
 
-**Adding a page:** choose type → copy an existing page of the same type → keep header/footer consistent → use the same `link` to `style.css` and font preconnects.
+**Workspace rules**
+
+- **Left column: the thing being made** (for `/upload`, the print on its paper). **Right column: the fields.**
+- **Desktop (at least 901px wide and 620px tall):** the page is one screen. The header, headline and left column stay put; only the right column scrolls. The primary action stays in view at the foot of the right column. Shorter or narrower windows scroll as an ordinary page.
+- **Below 901px:** one column, object first.
+- Page padding as other pages: `1.5rem`, `2rem` from 640px.
+- No marketing furniture: no hero, no screenshots grid, no final call to action.
+- Status colours, dark mode, shapes and spec colours follow the sections above.
+
+**Adding a page:** choose type (Landing, Reading or Workspace) → copy an existing page of the same type → keep header/footer consistent → use the same `link` to `style.css` and font preconnects.
 
 ---
 
@@ -258,6 +322,7 @@ Templates: `printswap-intro/index.html`, `*/index.html` per route
 | Use official Apple badge asset as supplied | Redraw or restyle the App Store badge |
 | Match Reading vs Landing `max-width` to page type | Use one global width for homepage and privacy policy without adjustment |
 | Keep legal pages calm (smaller H2) | Reuse hero H1 scale on `/privacy` |
+| Use the app's category colours for size, paper, border and edition on tool pages | Use coral, amber or teal on marketing or reading pages, or as small text on white |
 
 ---
 
