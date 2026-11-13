@@ -826,3 +826,37 @@ input:focus {
     display: block;
     text-wrap: balance;
 }
+
+/* Pricing page: price tables (real tables; built-in figures are overwritten live by /pricing/prices.js) */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 1.25rem;
+    font-size: 1.0625rem;
+}
+
+.price-table th,
+.price-table td {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-border);
+    text-align: start;
+    font-weight: 400;
+    vertical-align: baseline;
+}
+
+.price-table thead th {
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    color: var(--color-secondary);
+}
+
+.price-table tbody th {
+    padding-inline-end: 1rem;
+}
+
+.price-table td,
+.price-table thead th:last-child {
+    text-align: end;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
